@@ -27,16 +27,26 @@ print(populacao_cidades)
 print('Salvador' in populacao_cidades)
 del populacao_cidades['São Paulo']
 print(populacao_cidades)
-print('São Paulo' in populacao_cidades)'''
+print('São Paulo' in populacao_cidades)
 
 Autor = ['Sun Tzu', 'Fernando Pessoa', 'Thomas Mann', 'João Guimarães']
 Livro = ['A Arte da Guerra', 'Poesias Selecionadas', 'A Montanha Mágica', 'Primeiras Estórias']
 Ano = [2000, 2004, 2015, 2017]
 dados = {'Autor': Autor, 'Livro': Livro, 'Ano': Ano}
 autores = pd.DataFrame(dados)
-print(type(autores))
+#print(type(autores))
 df = pd.DataFrame(autores)
 #print(df)
 df.to_csv("autores.csv")
 autores = pd.read_csv('autores.csv', index_col=0)
-print(autores)
+#print(autores)
+#print(autores.info())
+#print(autores.columns)
+print(autores.index)'''
+
+california_house = pd.read_csv(r'C:\Users\thull\OneDrive\Documentos\Cursos\california_housing_train.csv')
+#print(california_house)
+#print(california_house.head())
+#print(california_house.describe())
+#print(california_house.columns)
+print(california_house.index)
